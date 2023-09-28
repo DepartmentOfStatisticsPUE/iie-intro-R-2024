@@ -9,10 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Maciej Beręsewicz" />
 
 
-<title>Zajęcia 2 - wczytanie danych do R</title>
+<title>Zajęcia 1 - wprowadzenie</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1747,59 +1746,81 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Zajęcia 2 - wczytanie danych do R</h1>
-<h4 class="author">Maciej Beręsewicz</h4>
+<h1 class="title toc-ignore">Zajęcia 1 - wprowadzenie</h1>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<p>Wczytanie danych z pliku csv</p>
+<p>Pomoc</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9saWNqYSA8LSByZWFkLmNzdihcIi4uL2RhdGEtcmF3L3BvbGljamEtZHJvZ2EtaW5mby1kemllbm5lLmNzdlwiKVxuaGVhZChwb2xpY2phKVxuYGBgIn0= -->
-<pre class="r"><code>policja &lt;- read.csv(&quot;../data-raw/policja-droga-info-dzienne.csv&quot;)
-head(policja)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP2luc3RhbGxcblxuYGBgIn0= -->
+<pre class="r"><code>?install
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6OCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiDDlyA4XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyV1J3VzdUUUJDR0o2NGRVcU5TYUNVT1NQUUZrRU5KMnRJZ3RRSUtQWEFCSVpCeVFkYldNY25XenE2MXRtWHNVKzk5QkY2RkswL0JJM0Rnd0FGeEtmeEpkaFVudHZSNVovOS9aM2RuOXYycllkOGR1a1MwUWZZRy9nNUNjajUrT1BlT2lXd0xreGJadERrYnY4RGVSZEFCZDBGYkcyNXZ2OWYzOWdkZTcybERPV29vaHczbG9LSDBHMG9QczYzNW1YVHlrK2daR0h3ak9ueE9kQWJ2NWQrbGI1MkRQZHozRDhiSG9BSXZsbjdyR3VUZ0xlYmZ3Vy9FWDVjKy9RQy93QTMwTXpBR0QycitFT0FNNm9OSFlBRGUxWHhIOThnR2xoN2RtdjhKdkFHbjRBaThCbXl0Mlk1ZzB6RFZqZTVvMFI2eGpPbjROaGRacUlwUUJKZWhsaDVXTEZOVk9XV0MrNEw1WTZsWVVFNzlQS2hLRWVWNjBmM2Fva1NtVlI3eEFyRjI5eUllcXZ3U2VURDlOSkZWR2ZEY1ozRWtKekkyZTJ3WFpjSkdFZmRIU281bFljN2ZxZGdGRDdoZitBdWZCUlB0M0ZOTWlGVmp0ZHhOSll1dUtYbldKK3VLNWw5N3ZTOUJ6RkxURnlPNnM3NTBQeXZrTDU1dEplV1dUREl1QlpLc1hmMDY5ZVNXV2hPMmN6Rzd5Y2dMSnJtSXZDZjY5VnFhTFQyMmEzRm5jYVQxVDIvbDZLM2FvUmh6WWZyanhPd2lqUFhrRGlxZUY5eE5GSjdTVkFJMTdXWXlZMmFkRzhqWUtQUGE2T1kvNGVtY3NyUURBQUE9In0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["data"],"name":[1],"type":["chr"],"align":["left"]},{"label":["interwencje"],"name":[2],"type":["int"],"align":["right"]},{"label":["zatrzymani_na_goracym_uczynku"],"name":[3],"type":["int"],"align":["right"]},{"label":["zatrzymani_poszukiwani"],"name":[4],"type":["int"],"align":["right"]},{"label":["kierujacy_po_spozyciu_alkoholu"],"name":[5],"type":["int"],"align":["right"]},{"label":["wypadki_drogowe"],"name":[6],"type":["int"],"align":["right"]},{"label":["zabici_w_wypadkach"],"name":[7],"type":["int"],"align":["right"]},{"label":["ranni_w_wypadkach"],"name":[8],"type":["int"],"align":["right"]}],"data":[{"1":"2023-09-27","2":"15851","3":"582","4":"395","5":"219","6":"88","7":"5","8":"93","_rn_":"1"},{"1":"2023-09-26","2":"15083","3":"542","4":"373","5":"239","6":"70","7":"8","8":"74","_rn_":"2"},{"1":"2023-09-25","2":"14780","3":"503","4":"335","5":"254","6":"51","7":"4","8":"62","_rn_":"3"},{"1":"2023-09-24","2":"13632","3":"559","4":"197","5":"323","6":"43","7":"2","8":"54","_rn_":"4"},{"1":"2023-09-23","2":"17202","3":"634","4":"243","5":"359","6":"57","7":"4","8":"69","_rn_":"5"},{"1":"2023-09-22","2":"17145","3":"577","4":"411","5":"282","6":"80","7":"10","8":"97","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTm8gZG9jdW1lbnRhdGlvbiBmb3Ig4oCYaW5zdGFsbOKAmSBpbiBzcGVjaWZpZWQgcGFja2FnZXMgYW5kIGxpYnJhcmllczpcbnlvdSBjb3VsZCB0cnkg4oCYPz9pbnN0YWxs4oCZXG4ifQ== -->
+<pre><code>No documentation for ‘install’ in specified packages and libraries:
+you could try ‘??install’</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Wczytanie danych z pliku XLSX</p>
+<p>Kalkulator</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInJlYWR4bFwiKVxuYGBgIn0= -->
-<pre class="r"><code>install.packages(&quot;readxl&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMSsxXG5gYGAifQ== -->
+<pre class="r"><code>1+1</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3FydCgyMClcbmBgYCJ9 -->
+<pre class="r"><code>sqrt(20)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQuNDcyMTM2XG4ifQ== -->
+<pre><code>[1] 4.472136</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhwKDIwKSArIHNxcnQoMjMwKVxuYGBgIn0= -->
+<pre class="r"><code>exp(20) + sqrt(230)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQ4NTE2NTIxMVxuIn0= -->
+<pre><code>[1] 485165211</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Obiekty</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSAxMFxuYiA8LSAxMFxuYSArIGIqYSArIGJcbmBgYCJ9 -->
+<pre class="r"><code>a &lt;- 10
+b &lt;- 10
+a + b*a + b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEyMFxuIn0= -->
+<pre><code>[1] 120</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSA1XG5hICsgYiphICsgYlxuYGBgIn0= -->
+<pre class="r"><code>a &lt;- 5
+a + b*a + b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDY1XG4ifQ== -->
+<pre><code>[1] 65</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Wektory</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9saWNqYTIgPC0gcmVhZF9leGNlbChcIi4uL2RhdGEtcmF3L3BvbGljamEtZHJvZ2EtaW5mby1kemllbm5lLnhsc3hcIilcbmhlYWQocG9saWNqYTIpXG5gYGAifQ== -->
-<pre class="r"><code>policja2 &lt;- read_excel(&quot;../data-raw/policja-droga-info-dzienne.xlsx&quot;)
-head(policja2)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKDEsMiwzKVxuYSA8LSAxOjNcbmEgPC0gYyhcImFcIiwgXCJiXCIsIFwiY1wiKVxuYGBgIn0= -->
+<pre class="r"><code>a &lt;- c(1,2,3)
+a &lt;- 1:3
+a &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6OCwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI2IMOXIDgiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMTJUelc3VFFCREh0NG1kcGtIOTRFUGNRRDF3VFlRVUNYRTBha0dxUUdvcEtlVG1iaDJUdUhaMmpUOXc3QXVoSEpCNGlqeENud0QxakFyS0ZRa0JqOENGQzRlR3NXZFdpaDNKK2MzT3pIOW0xdXM5M08xM1cvMFdZNnpPdERyODYyQXkvYWozcFAyUU1hMEdpeFdtc2JXY0V3amZCS01KM0FBMkhuM2YvYkVOQnZEakJiSjdYSERuRjBOK21pRWZHTG1qWEZDUE1pbHNNTGFXblBXajNrNDF6L0o0R0ZKZWpaeXJCL3N2OXZwV1JNdEdzWXpBdW9Lbm1NNzQ5bmVhOXpTK3hzakxuOFVNeHBjWmNuNkovdmxuSEU3cHp1NWpmUG9IK2M1SHZwOGdQOHlSWjAxVzBrM08wWjhjSUNQU2o2aWZPRWFtNTJXZFMvN3hiNlM4SUQzTjhaYjZ2NW1WZFM5eFlUeWZJdmVJajRuUGlEMVcxdDBpM1RaeGk4Z3E2M3NWM1N2TU1BNnA3ajdsUFZWelVMeXZLcFZQVWZDeHJVNnhTVTV0d0NOTzlqVkhSSGFRMk1JNnRjbDFKK05Sa0tWakxoeFRjSE1vQTI2bFl6TzJzbFM0TVNYZFhrcnlaWmpGcnBPQVRkRzdybU1IOFNub0lHaUd2c3hTeTRsTjdybHlKRDFWWXpOSmZUNXdIWE1ReUtGTVZQOGJHVDl4TE1kTVRJeHphMFNSNndFWG9od29iM2N0a0VsSGJYa2RubHIrMWhhTHhUOU1yQzlZK2NOdjVhK2k4em9BQ1N1KzRsSzVWZWxIamhSUXJKWmZRYjBpWGdrcWpzMVk1TTBIYldzVUM3ZmR6UnNVWWZ5dGs5MVlzcHZZVWxPRDZlcHEyV0xvQ1BWS2RJK2YyQjR0Tm1DVHhSNDdmZ0NucDNZQzNyQVR5WWlydkpZbFBlWEJHM3IxSCtJenNGeDVCQUFBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["data"],"name":[1],"type":["S3: POSIXct"],"align":["right"]},{"label":["interwencje"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["zatrzymani_na_goracym_uczynku"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["zatrzymani_poszukiwani"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["kierujacy_po_spozyciu_alkoholu"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wypadki_drogowe"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["zabici_w_wypadkach"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ranni_w_wypadkach"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"2023-09-27","2":"15851","3":"582","4":"395","5":"219","6":"88","7":"5","8":"93"},{"1":"2023-09-26","2":"15083","3":"542","4":"373","5":"239","6":"70","7":"8","8":"74"},{"1":"2023-09-25","2":"14780","3":"503","4":"335","5":"254","6":"51","7":"4","8":"62"},{"1":"2023-09-24","2":"13632","3":"559","4":"197","5":"323","6":"43","7":"2","8":"54"},{"1":"2023-09-23","2":"17202","3":"634","4":"243","5":"359","6":"57","7":"4","8":"69"},{"1":"2023-09-22","2":"17145","3":"577","4":"411","5":"282","6":"80","7":"10","8":"97"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiWmFqxJljaWEgMiAtIHdjenl0YW5pZSBkYW55Y2ggZG8gUiIKYXV0aG9yOiAiTWFjaWVqIEJlcsSZc2V3aWN6IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpXY3p5dGFuaWUgZGFueWNoIHogcGxpa3UgY3N2CgpgYGB7cn0KcG9saWNqYSA8LSByZWFkLmNzdigiLi4vZGF0YS1yYXcvcG9saWNqYS1kcm9nYS1pbmZvLWR6aWVubmUuY3N2IikKaGVhZChwb2xpY2phKQpgYGAKCgpXY3p5dGFuaWUgZGFueWNoIHogcGxpa3UgWExTWAoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoInJlYWR4bCIpCmBgYAoKYGBge3J9CmxpYnJhcnkocmVhZHhsKQpgYGAKCmBgYHtyfQpwb2xpY2phMiA8LSByZWFkX2V4Y2VsKCIuLi9kYXRhLXJhdy9wb2xpY2phLWRyb2dhLWluZm8tZHppZW5uZS54bHN4IikKaGVhZChwb2xpY2phMikKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiWmFqxJljaWEgMSAtIHdwcm93YWR6ZW5pZSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKUG9tb2MKCmBgYHtyfQo/aW5zdGFsbApgYGAKCkthbGt1bGF0b3IKCmBgYHtyfQoxKzEKc3FydCgyMCkKZXhwKDIwKSArIHNxcnQoMjMwKQpgYGAKCk9iaWVrdHkKCmBgYHtyfQphIDwtIDEwCmIgPC0gMTAKYSArIGIqYSArIGIKYSA8LSA1CmEgKyBiKmEgKyBiCmBgYAoKV2VrdG9yeQoKYGBge3J9CmEgPC0gYygxLDIsMykKYSA8LSAxOjMKYSA8LSBjKCJhIiwgImIiLCAiYyIpCmBgYAoK</div>
 
 
 
@@ -1846,7 +1867,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("02-wczytanie-danych.Rmd");
+  window.initializeSourceEmbed("01-wprowadzenie.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
