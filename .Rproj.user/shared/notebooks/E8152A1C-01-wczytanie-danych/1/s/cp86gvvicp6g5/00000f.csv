@@ -1,0 +1,2 @@
+"0","policja <- read.csv(""../data-raw/policja-droga-info-dzienne.csv"")"
+"0","head(policja)"

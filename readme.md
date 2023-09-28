@@ -39,3 +39,6 @@ Zbiór zawiera 5391 wierszy i 8 następujących kolumn:
 + `zabici_w_wypadkach` -- liczba zabitych na drogach,
 + `ranni_w_wypadkach` -- liczba rannych na drogach.
 
+## Case study na zajęcia
+
+W trakcie zajęc będziemy chcieli odpowiedziec na py
