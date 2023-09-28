@@ -35,7 +35,7 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
 
 W trakcie zajęć będziemy korzystać z [dziennych statystyk policji](https://policja.pl/pol/form/1,Informacja-dzienna.html). 
 
-Zbiór zawiera 5391 wierszy i 8 następujących kolumn:
+Zbiór zawiera 5391 wierszy i 11 następujących kolumn:
 
 + `data` -- dzień w formacie `YYYY-MM-DD`,
 + `interwencje` -- liczba policyjnych interwencji,
