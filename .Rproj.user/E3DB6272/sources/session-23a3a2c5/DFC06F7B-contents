@@ -20,7 +20,6 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
       + rodzaje obiektów
       + `install.packages()` i `library()`
   + Przetwarzanie danych w R [notatnik 1 -- wczytanie danych](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wczytanie-danych.nb.html):
-      + 
   + Obiekty i funkcje w R
   + Wizualizacja danych (wykresy rozrzutu, pudełkowe, histogramy)	
   + Wprowadzenie do tidyverse	
