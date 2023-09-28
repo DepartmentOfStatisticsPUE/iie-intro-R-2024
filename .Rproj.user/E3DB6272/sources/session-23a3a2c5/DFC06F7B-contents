@@ -13,6 +13,7 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
 
 + [Sylabus](https://esylabus.ue.poznan.pl/pl/11/1/1/105/4?masterElement=105)
   + Wprowadzenie do pakietu statystycznego R i Rstudio
+     + [notatnik 1 -- wczytanie danych](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wczytanie-danych.nb.html)
   + Przetwarzanie danych w R	
   + Obiekty i funkcje w R
   + Wizualizacja danych (wykresy rozrzutu, pudełkowe, histogramy)	
