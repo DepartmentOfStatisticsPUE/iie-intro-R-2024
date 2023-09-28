@@ -1,0 +1,29 @@
+---
+title: "Zajęcia 1 - wczytanie danych do R"
+author: "Maciej Beręsewicz"
+output: html_notebook
+---
+
+Wczytanie danych z pliku csv
+
+```{r}
+policja <- read.csv("../data-raw/policja-droga-info-dzienne.csv")
+head(policja)
+```
+
+
+Wczytanie danych z pliku XLSX
+
+```{r}
+install.packages("readxl")
+```
+
+```{r}
+library(readxl)
+```
+
+```{r}
+policja2 <- read_excel("../data-raw/policja-droga-info-dzienne.xlsx")
+head(policja2)
+```
+
