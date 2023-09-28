@@ -44,8 +44,8 @@ Zbiór zawiera 5391 wierszy i 8 następujących kolumn:
 + `kierujacy_po_spozyciu_alkoholu` -- liczba kierujących po spożyciu alkoholu,
 + `wypadki_drogowe` -- liczba wypadków na drogach,
 + `zabici_w_wypadkach` -- liczba zabitych na drogach,
-+ `ranni_w_wypadkach` -- liczba rannych na drogach.
++ `ranni_w_wypadkach` -- liczba rannych na drogach,
++ `dzien_tygodnia` -- dzień tygodnia: `Pon, Wt, Sr, Czw, Pt, So, Nie`,
++ `miesiac` -- miesiąc: 1-styczeń, ..., 12-grudzień,
++ `rok` -- rok: 2008,..., 2023.
 
-## Case study na zajęcia
-
-W trakcie zajęc będziemy chcieli odpowiedziec na py
