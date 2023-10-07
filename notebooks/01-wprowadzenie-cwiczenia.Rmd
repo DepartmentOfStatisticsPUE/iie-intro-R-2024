@@ -1,0 +1,23 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Zajęcia 2023.10.9 - ćwiczenia
+
++ utworzyć notatnik `R notebook` i zapisać go pod nazwą `01-wprowadzenie - ćwiczenia.Rmd`.
++ wykorzystując `R` proszę wyznaczyć wartość D.
+
+$$
+\begin{align}
+A & = \sqrt{667} + 0.5^2 \\
+B & = A^2 + \log(A-10) \\ 
+C & = A^2 - \sqrt{B} + A \times B \\
+D & = \frac{A^2 + B^2 + C^2}{\sqrt{A \times B \times C}}
+\end{align}
+$$
+Poprawna odpowiedź to $D = 18819.17$.
+
+
+
+
