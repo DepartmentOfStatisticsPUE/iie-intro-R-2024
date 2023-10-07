@@ -12,7 +12,7 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
   
 
 + [Sylabus](https://esylabus.ue.poznan.pl/pl/11/1/1/105/4?masterElement=105)
-  + **Wprowadzenie do pakietu statystycznego R i Rstudio** [notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wprowadzenie.nb.html) [ćwiczenia](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wprowadzenie-cwiczenia.nb.html)
+  + **Wprowadzenie do pakietu statystycznego R i Rstudio** ([notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wprowadzenie.nb.html) | [ćwiczenia](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/notebooks/01-wprowadzenie-cwiczenia.nb.html))
       + czysty R, Rstudio i projekty
       + skrypty R, R jako kalkulator
       + szukanie pomocy
