@@ -7,7 +7,7 @@ output: html_notebook
 
 Pomoc
 
-```{r}
+```{r, eval = FALSE}
 ?install
 ```
 
