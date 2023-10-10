@@ -39,6 +39,6 @@ A <- sqrt(667) + 0.5^2
 B <- A^2 + log(A-10)
 C <- A^2 - sqrt(B)  + A*B
 D <- (A^2+B^2+C^2)/sqrt(A*B*C)
-round(D)
+round(D, 2)
 ```
 `r unhide()`
