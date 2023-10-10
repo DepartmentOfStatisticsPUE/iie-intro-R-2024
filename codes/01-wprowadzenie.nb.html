@@ -11,7 +11,7 @@
 
 
 
-<title>Zajęcia 1 - wprowadzenie</title>
+<title>Zajęcia – wprowadzenie</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,10 +1746,24 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Zajęcia 1 - wprowadzenie</h1>
+<h1 class="title toc-ignore">Zajęcia – wprowadzenie</h1>
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#zajęcia-2023.10.02" id="toc-zajęcia-2023.10.02">Zajęcia
+2023.10.02</a></li>
+<li><a href="#zajęcia-2023.10.10" id="toc-zajęcia-2023.10.10">Zajęcia
+2023.10.10</a>
+<ul>
+<li><a href="#zrealizowane-w-trakcie-zajęć" id="toc-zrealizowane-w-trakcie-zajęć">Zrealizowane w trakcie
+zajęć</a></li>
+<li><a href="#dodatkowe-odpowiedzi-na-pytania-z-zajęć" id="toc-dodatkowe-odpowiedzi-na-pytania-z-zajęć">Dodatkowe (odpowiedzi
+na pytania z zajęć)</a></li>
+</ul></li>
+</ul>
+</div>
 
 <!-- rnb-text-begin -->
 <div id="zajęcia-2023.10.02" class="section level1">
@@ -1779,8 +1793,10 @@ sqrt(10)</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="zajęcia-2023.10.9" class="section level1">
-<h1>Zajęcia 2023.10.9</h1>
+<div id="zajęcia-2023.10.10" class="section level1">
+<h1>Zajęcia 2023.10.10</h1>
+<div id="zrealizowane-w-trakcie-zajęć" class="section level2">
+<h2>Zrealizowane w trakcie zajęć</h2>
 <p>Obiekty</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1821,17 +1837,25 @@ D</code></pre>
 sposobów</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubjEgPC0gMTo0XG5uMiA8LSBjKDEsMiwzLDQpXG5uMyA8LSBudW1lcmljKDApXG5uM1sxXSA8LSAxXG5uM1tjKDIsMyldIDwtIGMoMiwzKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubjEgPC0gMTo0XG5uMiA8LSBjKDEsMiwzLDQpXG5uMyA8LSBudW1lcmljKDApXG5uM1sxXSA8LSAxXG5uM1tjKDIsMyldIDwtIGMoMiwzKVxubjNbNF0gPC0gNFxubjNcbmBgYCJ9 -->
 <pre class="r"><code>n1 &lt;- 1:4
 n2 &lt;- c(1,2,3,4)
 n3 &lt;- numeric(0)
 n3[1] &lt;- 1
-n3[c(2,3)] &lt;- c(2,3)</code></pre>
+n3[c(2,3)] &lt;- c(2,3)
+n3[4] &lt;- 4
+n3</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzIDRcbiJ9 -->
+<pre><code>[1] 1 2 3 4</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="dodatkowe-odpowiedzi-na-pytania-z-zajęć" class="section level2">
+<h2>Dodatkowe (odpowiedzi na pytania z zajęć)</h2>
 <p>Jak chcemy podejrzeć wynik bez wywoływania obiektu możemy dany kod
-napisać w nawiasach okrągłych</p>
+napisać w nawiasach okrągłych.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKG4xIDwtIDE6NClcbmBgYCJ9 -->
@@ -1842,10 +1866,30 @@ napisać w nawiasach okrągłych</p>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Obiekt możemy usunąć uzywając funkcji <code>rm()</code>.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0objEpXG5gYGAifQ== -->
+<pre class="r"><code>rm(n1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Listę obiektów w environment zwraca funkcja <code>ls()</code></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubHMoKVxuYGBgIn0= -->
+<pre class="r"><code>ls()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYVwiICBcIkFcIiAgXCJCXCIgIFwiQ1wiICBcIkRcIiAgXCJuMlwiIFwibjNcIlxuIn0= -->
+<pre><code>[1] &quot;a&quot;  &quot;A&quot;  &quot;B&quot;  &quot;C&quot;  &quot;D&quot;  &quot;n2&quot; &quot;n3&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiWmFqxJljaWEgMSAtIHdwcm93YWR6ZW5pZSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBaYWrEmWNpYSAyMDIzLjEwLjAyCgoKS2Fsa3VsYXRvcgoKYGBge3J9CjErMQojIHBpZXJ3aWFzdGVrIHogMTAKc3FydCgxMCkKcGxvdCgxOjEwLCAxOjEwKSAjIHd5a3JlcyByb3pyenV0dQpgYGAKCgojIFphasSZY2lhIDIwMjMuMTAuOQoKT2JpZWt0eQoKYGBge3J9CmEgPC0gMTAgIyBhbHRlcm5hdHl3bmllIGE9MCBsdWIgMTAgLT4gYQphIDwtICJrb3QiCmEKYGBgCgpaYWRhbmllIAoKJCQKXGJlZ2lue2FsaWdufQpBICYgPSBcc3FydHs2Njd9ICsgMC41XjIgXFwKQiAmID0gQV4yICsgXGxvZyhBLTEwKSBcXCAKQyAmID0gQV4yIC0gXHNxcnR7Qn0gKyBBIFx0aW1lcyBCIFxcCkQgJiA9IFxmcmFje0FeMiArIEJeMiArIENeMn17XHNxcnR7QSBcdGltZXMgQiBcdGltZXMgQ319ClxlbmR7YWxpZ259CiQkCgpgYGB7cn0KQSA8LSBzcXJ0KDY2NykgKyAwLjVeMgpCIDwtIEFeMiArIGxvZyhBLTEwKQpDIDwtIEFeMiAtIHNxcnQoQikgICsgQSpCCkQgPC0gKEFeMitCXjIrQ14yKS9zcXJ0KEEqQipDKQpECmBgYAoKU3R3b3J6eW15IHdla3RvciBza8WCYWRhasSFY3kgc2nEmSB6IGVsZW1lbnTDs3c6IDEsIDIsIDMsIDQgbmEga2lsa2Egc3Bvc29iw7N3CgpgYGB7cn0KbjEgPC0gMTo0Cm4yIDwtIGMoMSwyLDMsNCkKbjMgPC0gbnVtZXJpYygwKQpuM1sxXSA8LSAxCm4zW2MoMiwzKV0gPC0gYygyLDMpCmBgYAoKSmFrIGNoY2VteSBwb2RlanJ6ZcSHIHd5bmlrIGJleiB3eXdvxYJ5d2FuaWEgb2JpZWt0dSBtb8W8ZW15IGRhbnkga29kIG5hcGlzYcSHIHcgbmF3aWFzYWNoIG9rcsSFZ8WCeWNoCgpgYGB7cn0KKG4xIDwtIDE6NCkKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiWmFqxJljaWEgLS0gd3Byb3dhZHplbmllIgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6CiAgICB0b2M6IHllcwotLS0KCiMgWmFqxJljaWEgMjAyMy4xMC4wMgoKCkthbGt1bGF0b3IKCmBgYHtyfQoxKzEKIyBwaWVyd2lhc3RlayB6IDEwCnNxcnQoMTApCnBsb3QoMToxMCwgMToxMCkgIyB3eWtyZXMgcm96cnp1dHUKYGBgCgojIFphasSZY2lhIDIwMjMuMTAuMTAKCiMjIFpyZWFsaXpvd2FuZSB3IHRyYWtjaWUgemFqxJnEhwoKT2JpZWt0eQoKYGBge3J9CmEgPC0gMTAgIyBhbHRlcm5hdHl3bmllIGE9MCBsdWIgMTAgLT4gYQphIDwtICJrb3QiCmEKYGBgCgpaYWRhbmllIAoKJCQKXGJlZ2lue2FsaWdufQpBICYgPSBcc3FydHs2Njd9ICsgMC41XjIgXFwKQiAmID0gQV4yICsgXGxvZyhBLTEwKSBcXCAKQyAmID0gQV4yIC0gXHNxcnR7Qn0gKyBBIFx0aW1lcyBCIFxcCkQgJiA9IFxmcmFje0FeMiArIEJeMiArIENeMn17XHNxcnR7QSBcdGltZXMgQiBcdGltZXMgQ319ClxlbmR7YWxpZ259CiQkCgpgYGB7cn0KQSA8LSBzcXJ0KDY2NykgKyAwLjVeMgpCIDwtIEFeMiArIGxvZyhBLTEwKQpDIDwtIEFeMiAtIHNxcnQoQikgICsgQSpCCkQgPC0gKEFeMitCXjIrQ14yKS9zcXJ0KEEqQipDKQpECmBgYAoKU3R3b3J6eW15IHdla3RvciBza8WCYWRhasSFY3kgc2nEmSB6IGVsZW1lbnTDs3c6IDEsIDIsIDMsIDQgbmEga2lsa2Egc3Bvc29iw7N3CgpgYGB7cn0KbjEgPC0gMTo0Cm4yIDwtIGMoMSwyLDMsNCkKbjMgPC0gbnVtZXJpYygwKQpuM1sxXSA8LSAxCm4zW2MoMiwzKV0gPC0gYygyLDMpCm4zWzRdIDwtIDQKbjMKYGBgCgojIyBEb2RhdGtvd2UgKG9kcG93aWVkemkgbmEgcHl0YW5pYSB6IHphasSZxIcpCgpKYWsgY2hjZW15IHBvZGVqcnplxIcgd3luaWsgYmV6IHd5d2/Fgnl3YW5pYSBvYmlla3R1IG1vxbxlbXkgZGFueSBrb2QgbmFwaXNhxIcgdyBuYXdpYXNhY2ggb2tyxIVnxYJ5Y2guCgpgYGB7cn0KKG4xIDwtIDE6NCkKYGBgCgpPYmlla3QgbW/FvGVteSB1c3VuxIXEhyB1enl3YWrEhWMgZnVua2NqaSBgcm0oKWAuCgpgYGB7cn0Kcm0objEpCmBgYAoKTGlzdMSZIG9iaWVrdMOzdyB3IGVudmlyb25tZW50IHp3cmFjYSBmdW5rY2phIGBscygpYAoKYGBge3J9CmxzKCkKYGBgCgo=</div>
 
 
 

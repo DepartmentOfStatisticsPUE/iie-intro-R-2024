@@ -1,6 +1,8 @@
 ---
-title: "Zajęcia 1 - wprowadzenie"
-output: html_notebook
+title: "Zajęcia -- wprowadzenie"
+output: 
+  html_notebook:
+    toc: yes
 ---
 
 # Zajęcia 2023.10.02
@@ -15,8 +17,9 @@ sqrt(10)
 plot(1:10, 1:10) # wykres rozrzutu
 ```
 
+# Zajęcia 2023.10.10
 
-# Zajęcia 2023.10.9
+## Zrealizowane w trakcie zajęć
 
 Obiekty
 
@@ -53,11 +56,27 @@ n2 <- c(1,2,3,4)
 n3 <- numeric(0)
 n3[1] <- 1
 n3[c(2,3)] <- c(2,3)
+n3[4] <- 4
+n3
 ```
 
-Jak chcemy podejrzeć wynik bez wywoływania obiektu możemy dany kod napisać w nawiasach okrągłych
+## Dodatkowe (odpowiedzi na pytania z zajęć)
+
+Jak chcemy podejrzeć wynik bez wywoływania obiektu możemy dany kod napisać w nawiasach okrągłych.
 
 ```{r}
 (n1 <- 1:4)
+```
+
+Obiekt możemy usunąć uzywając funkcji `rm()`.
+
+```{r}
+rm(n1)
+```
+
+Listę obiektów w environment zwraca funkcja `ls()`
+
+```{r}
+ls()
 ```
 
