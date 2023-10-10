@@ -1,0 +1,63 @@
+---
+title: "Zajęcia 1 - wprowadzenie"
+output: html_notebook
+---
+
+# Zajęcia 2023.10.02
+
+
+Kalkulator
+
+```{r}
+1+1
+# pierwiastek z 10
+sqrt(10)
+plot(1:10, 1:10) # wykres rozrzutu
+```
+
+
+# Zajęcia 2023.10.9
+
+Obiekty
+
+```{r}
+a <- 10 # alternatywnie a=0 lub 10 -> a
+a <- "kot"
+a
+```
+
+Zadanie 
+
+$$
+\begin{align}
+A & = \sqrt{667} + 0.5^2 \\
+B & = A^2 + \log(A-10) \\ 
+C & = A^2 - \sqrt{B} + A \times B \\
+D & = \frac{A^2 + B^2 + C^2}{\sqrt{A \times B \times C}}
+\end{align}
+$$
+
+```{r}
+A <- sqrt(667) + 0.5^2
+B <- A^2 + log(A-10)
+C <- A^2 - sqrt(B)  + A*B
+D <- (A^2+B^2+C^2)/sqrt(A*B*C)
+D
+```
+
+Stworzymy wektor składający się z elementów: 1, 2, 3, 4 na kilka sposobów
+
+```{r}
+n1 <- 1:4
+n2 <- c(1,2,3,4)
+n3 <- numeric(0)
+n3[1] <- 1
+n3[c(2,3)] <- c(2,3)
+```
+
+Jak chcemy podejrzeć wynik bez wywoływania obiektu możemy dany kod napisać w nawiasach okrągłych
+
+```{r}
+(n1 <- 1:4)
+```
+
