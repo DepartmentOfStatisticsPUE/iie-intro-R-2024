@@ -1,0 +1,44 @@
+---
+title: "Ćwiczenia #1"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 4, top = 0)
+```
+
+Ile wynosi D?
+
+$$
+\begin{align}
+A & = \sqrt{667} + 0.5^2 \\
+B & = A^2 + \log(A-10) \\ 
+C & = A^2 - \sqrt{B} + A \times B \\
+D & = \frac{A^2 + B^2 + C^2}{\sqrt{A \times B \times C}}
+\end{align}
+$$
+
+```{r}
+A <- sqrt(667) + 0.5^2
+B <- A^2 + log(A-10)
+C <- A^2 - sqrt(B)  + A*B
+D <- (A^2+B^2+C^2)/sqrt(A*B*C)
+```
+
+Wpisz odpowiedź tutaj zaokrąglając do dwóch miejsc po przecinku: `r fitb(round(D,2))`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+A <- sqrt(667) + 0.5^2
+B <- A^2 + log(A-10)
+C <- A^2 - sqrt(B)  + A*B
+D <- (A^2+B^2+C^2)/sqrt(A*B*C)
+round(D)
+```
+`r unhide()`

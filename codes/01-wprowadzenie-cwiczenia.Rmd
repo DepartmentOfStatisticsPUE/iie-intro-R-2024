@@ -19,5 +19,3 @@ $$
 Poprawna odpowiedź to $D = 18819.17$.
 
 
-
-
