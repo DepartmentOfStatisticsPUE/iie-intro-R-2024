@@ -174,5 +174,35 @@ sum(2^i/i + 3^i/i^2)
 ```
 `r unhide()`
 
+**Ćwiczenie** 15. Utwórz wektor składający się z 1000 elementów zawierający wyłącznie wartości `{0,1}`. Ustaw ziarno na 123.
 
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź #1"}
+?sample
+```
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź #2"}
+?set.seed
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+set.seed(123)
+x <- sample(x = 0:1, 1000, replace = T)
+```
+`r unhide()`
+
+
+**Ćwiczenie** 15. Utwórz wektor, który będzie zawierał następujące wartości
+`(q1s1, q1s2, q1s3, ...., q5s1, q5s2, q5s3)`.
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź"}
+?paste
+?paste0
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+paste0( rep(paste0("q", 1:5, "s"), each = 3), 1:3)
+```
+`r unhide()`
 
