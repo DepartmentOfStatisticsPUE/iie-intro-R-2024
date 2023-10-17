@@ -1070,7 +1070,7 @@ display: none;
 </div>
 
 
-<div class="countdown" id="timer_0863cd47" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_60f26130" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1152,6 +1152,28 @@ B =
 <li>Znajdź macierz odwrotną <span class="math inline">\(A^{−1}\)</span></li>
 <li>Znajdź <span class="math inline">\(A^3\)</span></li>
 </ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>A &lt;- matrix(c(1,2,-1,0,
+              3,-2,4,5,
+              2,6,5,-3,
+              0,1,5,-4),
+              nrow=4,ncol=4,TRUE)
+B &lt;- matrix(c(3,6,
+              4,0,
+              2,-1,
+              1,1),
+              nrow=4,ncol=2,TRUE)
+print(A)       # wyświetlamy macierz A
+print(B)       # wyświetlamy macierz B
+det(A)         # wyznacznik macierzy A
+A%*%B          # iloczyn macierzy A i B
+t(B)           # transpozycja macierzy B
+solve(A)       # odwrotność macierzy A
+A^3            # A do potęgi 3 tj. A*A*A</code></pre>
+</div>
 <p><strong>Ćwiczenie</strong> 5. Zadeklaruj następujacą macierz i
 rozwiąż poniższe zadania</p>
 <p><span class="math display">\[
@@ -1177,6 +1199,23 @@ macierzy A.</li>
 <li>Wyświetl zawartość drugiej kolumny.</li>
 <li>Wyświetl zawartość pierwszego wiersza.</li>
 </ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>A &lt;- matrix(1:9,nrow=3,ncol=3,TRUE)
+print(A)                  # wyświetlamy macierz A
+nrow(A)                   # liczba wierszy macierzy A
+ncol(A)                   # liczba kolumn macierzy A
+sum(A)                    # suma wszystkich elementów macierzy A
+colSums(A)                # suma elementów w poszczególnych kolumnach
+rowSums(A)                # suma elementów w poszczególnych wierszach
+colMeans(A)               # średnia elementów w poszczególnych kolumnach
+rowMeans(A)               # średnia elementów w poszczególnych wierszach
+A[1,1]+A[3,2]             # A11+A32
+A[,2]                     # druga kolumna
+A[1,]                     # pierwszy wiersz</code></pre>
+</div>
 </div>
 
 <script>

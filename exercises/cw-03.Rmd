@@ -101,6 +101,27 @@ $$
 4. Znajdź macierz odwrotną $A^{−1}$
 5. Znajdź $A^3$
 
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+A <- matrix(c(1,2,-1,0,
+              3,-2,4,5,
+              2,6,5,-3,
+              0,1,5,-4),
+              nrow=4,ncol=4,TRUE)
+B <- matrix(c(3,6,
+              4,0,
+              2,-1,
+              1,1),
+              nrow=4,ncol=2,TRUE)
+print(A)       # wyświetlamy macierz A
+print(B)       # wyświetlamy macierz B
+det(A)         # wyznacznik macierzy A
+A%*%B          # iloczyn macierzy A i B
+t(B)           # transpozycja macierzy B
+solve(A)       # odwrotność macierzy A
+A^3            # A do potęgi 3 tj. A*A*A
+```
+`r unhide()`
 
 **Ćwiczenie** 5. Zadeklaruj następujacą macierz i rozwiąż poniższe zadania
 
@@ -123,6 +144,21 @@ $$
 8. Wyświetl zawartość drugiej kolumny.
 9. Wyświetl zawartość pierwszego wiersza.
 
-
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+A <- matrix(1:9,nrow=3,ncol=3,TRUE)
+print(A)                  # wyświetlamy macierz A
+nrow(A)                   # liczba wierszy macierzy A
+ncol(A)                   # liczba kolumn macierzy A
+sum(A)                    # suma wszystkich elementów macierzy A
+colSums(A)                # suma elementów w poszczególnych kolumnach
+rowSums(A)                # suma elementów w poszczególnych wierszach
+colMeans(A)               # średnia elementów w poszczególnych kolumnach
+rowMeans(A)               # średnia elementów w poszczególnych wierszach
+A[1,1]+A[3,2]             # A11+A32
+A[,2]                     # druga kolumna
+A[1,]                     # pierwszy wiersz
+```
+`r unhide()`
 
 
