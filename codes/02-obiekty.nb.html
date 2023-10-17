@@ -11,7 +11,7 @@
 
 
 
-<title>R Notebook</title>
+<title>Zajęcia – obiekty</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,16 +1746,199 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">R Notebook</h1>
+<h1 class="title toc-ignore">Zajęcia – obiekty</h1>
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#zajęcia-2023.10.17" id="toc-zajęcia-2023.10.17">Zajęcia
+2023.10.17</a>
+<ul>
+<li><a href="#wektory" id="toc-wektory">Wektory</a></li>
+<li><a href="#macierze" id="toc-macierze">Macierze</a></li>
+<li><a href="#listy" id="toc-listy">Listy</a></li>
+</ul></li>
+</ul>
+</div>
 
 <!-- rnb-text-begin -->
 <div id="zajęcia-2023.10.17" class="section level1">
 <h1>Zajęcia 2023.10.17</h1>
 <div id="wektory" class="section level2">
 <h2>Wektory</h2>
+<p>Tworzymy ciąg liczb całkowitych od 1 do 10</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMToxMFxuYGBgIn0= -->
+<pre class="r"><code>1:10</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMFxuIn0= -->
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLTE6LTEwXG5gYGAifQ== -->
+<pre class="r"><code>-1:-10</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgLTEgIC0yICAtMyAgLTQgIC01ICAtNiAgLTcgIC04ICAtOSAtMTBcbiJ9 -->
+<pre><code> [1]  -1  -2  -3  -4  -5  -6  -7  -8  -9 -10</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYygxLDIsMyw0LDUsNiw3LDgsOSwxMCkgIyMgdHdvcnplbmllIHdla3RvcmEgeiBmdW5rY2rEhSBjXG5gYGAifQ== -->
+<pre class="r"><code>c(1,2,3,4,5,6,7,8,9,10) ## tworzenie wektora z funkcją c</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMFxuIn0= -->
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Tworzę wektor składający się z wartości 1, 5, 1000</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDEgPC0gYygxLCA1LCAxMDAwKVxueDFbMV1cbmBgYCJ9 -->
+<pre class="r"><code>x1 &lt;- c(1, 5, 1000)
+x1[1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDFcbiJ9 -->
+<pre><code>[1] 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbMl1cbmBgYCJ9 -->
+<pre class="r"><code>x1[2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
+<pre><code>[1] 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbMToyXVxuYGBgIn0= -->
+<pre class="r"><code>x1[1:2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgNVxuIn0= -->
+<pre><code>[1] 1 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbYygxLDIpXVxuYGBgIn0= -->
+<pre class="r"><code>x1[c(1,2)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgNVxuIn0= -->
+<pre><code>[1] 1 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbYygxLDMpXVxuYGBgIn0= -->
+<pre class="r"><code>x1[c(1,3)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgIDEgMTAwMFxuIn0= -->
+<pre><code>[1]    1 1000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbCh4MSwxKSAjIyBvc3RhdG5pIGVsZW1lbnRcbmBgYCJ9 -->
+<pre class="r"><code>tail(x1,1) ## ostatni element</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEwMDBcbiJ9 -->
+<pre><code>[1] 1000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbbGVuZ3RoKHgxKV0gIyMgZnVua2NqYSBsZW5ndGggendyYWNhIGTFgnVnb8WbxIdcbmBgYCJ9 -->
+<pre class="r"><code>x1[length(x1)] ## funkcja length zwraca długość</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEwMDBcbiJ9 -->
+<pre><code>[1] 1000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Zastępujemy określone elementy wektor x1 innymi wartościami</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDFbMV0gPC0gMTBcbngyIDwtIHgxICMjIGtvcGlhIHgxXG54MVtjKDEsIDMpXSA8LSBjKDk5OSwgLTEwMDApXG54MVxuYGBgIn0= -->
+<pre class="r"><code>x1[1] &lt;- 10
+x2 &lt;- x1 ## kopia x1
+x1[c(1, 3)] &lt;- c(999, -1000)
+x1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgOTk5ICAgICA1IC0xMDAwXG4ifQ== -->
+<pre><code>[1]   999     5 -1000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>przykłady wektoryzacji obliczen</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDEqMlxuYGBgIn0= -->
+<pre class="r"><code>x1*2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxOTk4ICAgIDEwIC0yMDAwXG4ifQ== -->
+<pre><code>[1]  1998    10 -2000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3FydChhYnMoeDEpKVxuYGBgIn0= -->
+<pre class="r"><code>sqrt(abs(x1))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMxLjYwNjk2MSAgMi4yMzYwNjggMzEuNjIyNzc3XG4ifQ== -->
+<pre><code>[1] 31.606961  2.236068 31.622777</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbih4MSlcbmBgYCJ9 -->
+<pre class="r"><code>mean(x1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEuMzMzMzMzXG4ifQ== -->
+<pre><code>[1] 1.333333</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeSh4MSlcbmBgYCJ9 -->
+<pre class="r"><code>summary(x1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBNaW4uICAgMXN0IFF1LiAgICBNZWRpYW4gICAgICBNZWFuICAgM3JkIFF1LiAgICAgIE1heC4gXG4tMTAwMC4wMDAgIC00OTcuNTAwICAgICA1LjAwMCAgICAgMS4zMzMgICA1MDIuMDAwICAgOTk5LjAwMCBcbiJ9 -->
+<pre><code>     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+-1000.000  -497.500     5.000     1.333   502.000   999.000 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>tworzymy wektor tekstowy</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudDEgPC0gYyhcImFsYVwiLCBcIm1hXCIsIFwia290YVwiKVxudDFbMl0gPC0gMTAwXG50MVxuYGBgIn0= -->
+<pre class="r"><code>t1 &lt;- c(&quot;ala&quot;, &quot;ma&quot;, &quot;kota&quot;)
+t1[2] &lt;- 100
+t1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWxhXCIgIFwiMTAwXCIgIFwia290YVwiXG4ifQ== -->
+<pre><code>[1] &quot;ala&quot;  &quot;100&quot;  &quot;kota&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3ModDEpXG5gYGAifQ== -->
+<pre class="r"><code>class(t1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Doklejamy do każdego elementu z wektora t1 liczbę 100</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFzdGUodDEsIDEwMCwgc2VwID0gXCJfXCIpXG5gYGAifQ== -->
+<pre class="r"><code>paste(t1, 100, sep = &quot;_&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWxhXzEwMFwiICBcIjEwMF8xMDBcIiAgXCJrb3RhXzEwMFwiXG4ifQ== -->
+<pre><code>[1] &quot;ala_100&quot;  &quot;100_100&quot;  &quot;kota_100&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Wektor logiczny</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubDEgPC0gYyhUUlVFLCBULCBGQUxTRSwgRilcbmwxXG5gYGAifQ== -->
+<pre class="r"><code>l1 &lt;- c(TRUE, T, FALSE, F)
+l1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICBUUlVFICBUUlVFIEZBTFNFIEZBTFNFXG4ifQ== -->
+<pre><code>[1]  TRUE  TRUE FALSE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Chcę sprawdzić które elementy wektor x1 są większe od 0</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDEgPiAwXG5gYGAifQ== -->
+<pre class="r"><code>x1 &gt; 0</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICBUUlVFICBUUlVFIEZBTFNFXG4ifQ== -->
+<pre><code>[1]  TRUE  TRUE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="macierze" class="section level2">
 <h2>Macierze</h2>
@@ -1766,7 +1949,7 @@ display: none;
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBaYWrEmWNpYSAyMDIzLjEwLjE3CgojIyBXZWt0b3J5CgojIyBNYWNpZXJ6ZQoKIyMgTGlzdHkKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiWmFqxJljaWEgLS0gb2JpZWt0eSIKb3V0cHV0OiAKICBodG1sX25vdGVib29rOgogICAgdG9jOiB5ZXMKLS0tCgojIFphasSZY2lhIDIwMjMuMTAuMTcKCiMjIFdla3RvcnkKClR3b3J6eW15IGNpxIVnIGxpY3piIGNhxYJrb3dpdHljaCBvZCAxIGRvIDEwCgpgYGB7cn0KMToxMAotMTotMTAKYygxLDIsMyw0LDUsNiw3LDgsOSwxMCkgIyMgdHdvcnplbmllIHdla3RvcmEgeiBmdW5rY2rEhSBjCmBgYApUd29yesSZIHdla3RvciBza8WCYWRhasSFY3kgc2nEmSB6IHdhcnRvxZtjaSAxLCA1LCAxMDAwCgpgYGB7cn0KeDEgPC0gYygxLCA1LCAxMDAwKQp4MVsxXQp4MVsyXQp4MVsxOjJdCngxW2MoMSwyKV0KeDFbYygxLDMpXQp0YWlsKHgxLDEpICMjIG9zdGF0bmkgZWxlbWVudAp4MVtsZW5ndGgoeDEpXSAjIyBmdW5rY2phIGxlbmd0aCB6d3JhY2EgZMWCdWdvxZvEhwpgYGAKClphc3TEmXB1amVteSBva3JlxZtsb25lIGVsZW1lbnR5IHdla3RvciB4MSBpbm55bWkgd2FydG/Fm2NpYW1pCgpgYGB7cn0KeDFbMV0gPC0gMTAKeDIgPC0geDEgIyMga29waWEgeDEKeDFbYygxLCAzKV0gPC0gYyg5OTksIC0xMDAwKQp4MQpgYGAKCnByenlrxYJhZHkgd2VrdG9yeXphY2ppIG9ibGljemVuCgpgYGB7cn0KeDEqMgpzcXJ0KGFicyh4MSkpCmBgYAoKYGBge3J9Cm1lYW4oeDEpCnN1bW1hcnkoeDEpCmBgYAoKdHdvcnp5bXkgd2VrdG9yIHRla3N0b3d5CgpgYGB7cn0KdDEgPC0gYygiYWxhIiwgIm1hIiwgImtvdGEiKQp0MVsyXSA8LSAxMDAKdDEKY2xhc3ModDEpCmBgYAoKRG9rbGVqYW15IGRvIGthxbxkZWdvIGVsZW1lbnR1IHogd2VrdG9yYSB0MSBsaWN6YsSZIDEwMAoKYGBge3J9CnBhc3RlKHQxLCAxMDAsIHNlcCA9ICJfIikKYGBgCgpXZWt0b3IgbG9naWN6bnkKCmBgYHtyfQpsMSA8LSBjKFRSVUUsIFQsIEZBTFNFLCBGKQpsMQpgYGAKCkNoY8SZIHNwcmF3ZHppxIcga3TDs3JlIGVsZW1lbnR5IHdla3RvciB4MSBzxIUgd2nEmWtzemUgb2QgMAoKYGBge3J9CngxID4gMApgYGAKCiMjIE1hY2llcnplCgojIyBMaXN0eQoK</div>
 
 
 
