@@ -71,4 +71,58 @@ C
 ```
 `r unhide()`
 
+## Zadania dodatkowe
+
+**Ćwiczenie** 4.  Zadeklaruj poniższe macierze i rozwąż następujące zadania
+
+$$
+A = 
+\begin{pmatrix}
+1 & 2 & -1 & 0 \\
+3 & −2 &  4  & 5 \\ 
+2  & 6  & 5  & −3 \\
+0  & 1 & 5  & −4
+\end{pmatrix}
+$$
+
+$$
+B = 
+\begin{pmatrix}
+3 & 6 \\
+4 & 0 \\
+2 & −1 \\
+1 & 1
+\end{pmatrix}
+$$
+
+1. Oblicz wyznacznik macierzy A.
+2. Znajdź iloczyn $A\times B$.
+3. Znajdź macierz transponowaną $B^T$
+4. Znajdź macierz odwrotną $A^{−1}$
+5. Znajdź $A^3$
+
+
+**Ćwiczenie** 5. Zadeklaruj następujacą macierz i rozwiąż poniższe zadania
+
+$$
+A = 
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{pmatrix}
+$$
+
+1. Wyznacz liczbę wierszy i kolumn macierzy A.
+2. Wyznacz sumę wszystkich elementów macierzy A.
+3. Wyznacz sumy wszytkich elementów w poszczególnych kolumnach macierzy A.
+4. Wyznacz sumy wszytkich elementów w poszczególnych wierszach macierzy A.
+5. Wyznacz średnie wszytkich elementów w poszczególnych kolumnach macierzy A.
+6. Wyznacz średnie wszytkich elementów w poszczególnych wierszach macierzy A.
+7. Oblicz A11 + A32.
+8. Wyświetl zawartość drugiej kolumny.
+9. Wyświetl zawartość pierwszego wiersza.
+
+
+
 
