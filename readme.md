@@ -20,8 +20,8 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
       + rodzaje obiektów
       + `install.packages()` i `library()`
   + Obiekty i funkcje w R ([notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/codes/02-obiekty.nb.html))
-      + wektory ([ćwiczenia #2](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-02.html))
-      + macierze,
+      + wektory ([ćwiczenia #2](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-02.html)), 
+      + macierze ([ćwiczenia #3](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-03.html)),
       + ramki danych,
       + listy.
   + Przetwarzanie danych w R [notatnik 1 -- wczytanie danych](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/codes/01-wczytanie-danych.nb.html):

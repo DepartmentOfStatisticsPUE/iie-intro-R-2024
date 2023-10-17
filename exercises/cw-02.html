@@ -1070,7 +1070,7 @@ display: none;
 </div>
 
 
-<div class="countdown" id="timer_eccb982a" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_b693af0a" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1206,6 +1206,33 @@ Zobacz podpowiedź
 Rozwiązanie
 </button>
 <pre class="r"><code>paste(&quot;a&quot;, 1:10, &quot;_&quot;, 1:10, sep = &quot;&quot;)</code></pre>
+</div>
+<p><strong>Ćwiczenie</strong> 12. Utwórz następujący wektor <span class="math inline">\((2, \frac{2^2}{2}, \frac{2^3}{3}, ...,
+\frac{2^{25}}{25})\)</span>.</p>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>2^(1:25)/1:25</code></pre>
+</div>
+<p><strong>Ćwiczenie</strong> 13. Utwórz następujący wektor i wyznacz
+jego sumę <span class="math inline">\(\sum_{i=10}^{100}(i^3 +
+4i^2)\)</span>.</p>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>i &lt;- 10:100
+sum(i^3+4*i^2)</code></pre>
+</div>
+<p><strong>Ćwiczenie</strong> 14. Utwórz następujący wektor i wyznacz
+jego sumę <span class="math inline">\(\sum_{i=1}^{25}(\frac{2^i}{i}+\frac{3^i}{i^2})\)</span>.</p>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>i &lt;- 1:25
+sum(2^i/i + 3^i/i^2)</code></pre>
 </div>
 </div>
 

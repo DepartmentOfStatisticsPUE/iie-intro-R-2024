@@ -147,3 +147,32 @@ paste("a", 1:10, "_", 1:10, sep = "")
 ```
 `r unhide()`
 
+**Ćwiczenie** 12. Utwórz następujący wektor $(2, \frac{2^2}{2}, \frac{2^3}{3}, ..., \frac{2^{25}}{25})$.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+2^(1:25)/1:25
+```
+`r unhide()`
+
+**Ćwiczenie** 13. Utwórz następujący wektor i wyznacz jego sumę $\sum_{i=10}^{100}(i^3 + 4i^2)$.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+i <- 10:100
+sum(i^3+4*i^2)
+```
+`r unhide()`
+
+
+**Ćwiczenie** 14. Utwórz następujący wektor i wyznacz jego sumę $\sum_{i=1}^{25}(\frac{2^i}{i}+\frac{3^i}{i^2})$.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+i <- 1:25
+sum(2^i/i + 3^i/i^2)
+```
+`r unhide()`
+
+
+
