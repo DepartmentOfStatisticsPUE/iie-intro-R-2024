@@ -1,0 +1,149 @@
+---
+title: "Ćwiczenia #2"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 5, top = 0)
+```
+
+
+## Zadania na zajęcia
+
+**Ćwiczenie** 1. Utwórz obiekt o nazwie `x1` będący wektorem następujących liczb: `2, 6, 8, 6, 4, 3`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x1 <- c(2,6,8,6,4,3)
+```
+`r unhide()`
+
+**Ćwiczenie** 2. Utwórz wektor kolejnych liczb całkowitych od 1 do 100.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x2 <- 1:100
+```
+`r unhide()`
+
+
+**Ćwiczenie** 3. Utwórz wektor kolejnych parzystych liczb całkowitych od 2 do 100.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x3 <- seq(2, 100, 2)
+```
+`r unhide()`
+
+
+**Ćwiczenie** 4. Utwórz wektor złożony z kolejnych liczb nieparzystych postaci postaci: `99, 95, 91, 87, ..., 47`. 
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź"}
+?seq
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x4 <- seq(99,47,-4)
+```
+`r unhide()`
+
+
+**Ćwiczenie** 5. Wygeneruj wektor złożony z kolejnych liczb parzystych `2, 4, ..., 20`. Wektor ten nie powinien zawierać liczb 6 i 10. Innymi słowy innymi słowy wygeneruj wektor `2, 4, 8, 12, 14, 16, 18, 20`.
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź"}
+?setdiff
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x5 <- seq(2,20,2)
+## rozwiązanie 1
+setdiff(x5, c(6,10))
+## rozwiązanie 2
+x5[which(!x5 %in% c(6,10))]
+```
+`r unhide()`
+
+
+**Ćwiczenie** 6. Zapisz w postaci wektora wiek 10 osób: `25, 35, 43, 28, 47, 77, 55, 66, 25, 25`. Dla tak utworzonego wektora oblicz następujące statystyki opisowe: minimum, maksimum, średnia, odchylenie standardowe, zakres, kwartyle.
+
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x6 <- c(25, 35, 43, 28, 47, 77, 55, 66, 25, 25)
+summary(x6)
+```
+`r unhide()`
+
+
+## Zadania dodatkowe
+
+**Ćwiczenie** 7. Utwórz wektor a z liczbami od 100 do 103 i wektor b z liczbami od 4 do 103.
+wektor b z liczbami od 4 do 7. Utwórz nowy wektor d będący
+kombinacją b i a (w tej kolejności). Wyświetl go.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+a <- 100:103
+b <- 4:7
+x7 <- c(b,a)
+x7
+```
+`r unhide()`
+
+
+**Ćwiczenie** 8. Utwórz wektor:
+`1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3`. 
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź"}
+?rep
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+ex8 <- rep(c(1,2,3), times = 5)
+ex8
+```
+`r unhide()`
+
+
+**Ćwiczenie** 9. Utwórz wektor zawierający Twoje imię 100 razy.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+ex9 <- rep("a", 100)
+```
+`r unhide()`
+
+
+**Ćwiczenie** 10. Utwórz wektor o nazwie w1, który będzie zawierał następujące wartości
+następujące wartości $(2, 2^2, 2^3, ..., 2^{10})$.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+x10 <- 2^c(1:10)
+x10
+```
+`r unhide()`
+
+
+**Ćwiczenie** 11. Utwórz wektor, który będzie zawierał następujące wartości
+(`a1_1, a1_2, a3_3, . . . ,a10_10`) 
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "Zobacz podpowiedź"}
+?paste
+```
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+paste("a", 1:10, "_", 1:10, sep = "")
+```
+`r unhide()`
+

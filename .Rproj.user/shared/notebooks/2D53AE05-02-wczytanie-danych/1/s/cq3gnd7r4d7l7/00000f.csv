@@ -1,2 +1,0 @@
-"0","policja2 <- read_excel(""../data-raw/policja-droga-info-dzienne.xlsx"")"
-"0","head(policja2)"
