@@ -1,0 +1,57 @@
+---
+title: "Ćwiczenia #1"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 5, top = 0)
+```
+
+
+## Zadania na zajęcia
+
+1. Ile wynosiła liczba zabitych w wypadkach w 2022 roku? `r fitb(1676)`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+dane |>
+  subset(rok == 2022) |>
+  aggregate(zabici_w_wypadkach ~ rok, data = _, FUN =sum)
+
+## lub
+aggregate(zabici_w_wypadkach ~ rok, data = dane, FUN =sum) |>
+  subset(rok == 2022)
+```
+`r unhide()`
+
+2. Ile wynosiła średnia wskaźnika liczby zabitych do liczby wypadków
+
+
+$$
+\text{wskaźnik} = \frac{\sum_{ik} \text{liczba zabitych w i-tym dniu k-roku}}{\sum_{ik} \text{liczba wypadków w i-tym dniu k-roku}}
+$$
+w poniższych latach:
+
++ 2010: `r fitb(round(0.09492312*100,2))`.
++ 2020: `r fitb(round(0.09312290*100,2))`.
+
+
+Wyniki proszę podać w procentach i zaokrąglić do 2 miejsc po przecinku (przykładowa odpowiedź: 2.15). 
+
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+aggregate(cbind(zabici_w_wypadkach, wypadki_drogowe) ~ rok, data = dane, FUN = sum) |>
+  subset(rok %in% c(2010, 2020)) |>
+  transform(wsk = zabici_w_wypadkach/wypadki_drogowe)
+```
+`r unhide()`
+
+
+

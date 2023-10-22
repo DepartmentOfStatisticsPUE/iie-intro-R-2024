@@ -52,3 +52,6 @@ Zbiór zawiera 5391 wierszy i 11 następujących kolumn:
 + `miesiac` -- miesiąc: 1-styczeń, ..., 12-grudzień,
 + `rok` -- rok: 2008,..., 2023.
 
+## Materiały dla 3 roku
+
++ [ćwiczenia #2](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/3-rok-cw-01.html)
