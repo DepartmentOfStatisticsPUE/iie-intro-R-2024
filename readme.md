@@ -22,7 +22,7 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
   + Obiekty i funkcje w R ([notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/codes/02-obiekty.nb.html))
       + wektory ([ćwiczenia #2](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-02.html)), 
       + macierze ([ćwiczenia #3](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-03.html)),
-      + ramki danych,
+      + ramki danych ([ćwiczenia #4](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-04.html)),
       + listy.
   + Przetwarzanie danych w R:
   + Wizualizacja danych (wykresy rozrzutu, pudełkowe, histogramy)	
