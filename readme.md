@@ -25,6 +25,9 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
       + ramki danych ([ćwiczenia #4](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-04.html)),
       + listy.
   + Przetwarzanie danych w R:
+      + wybieranie wierszy,
+      + wybieranie kolumn,
+      + tworzenie nowych kolumn.
   + Wizualizacja danych (wykresy rozrzutu, pudełkowe, histogramy)	
   + Wprowadzenie do tidyverse	
   
