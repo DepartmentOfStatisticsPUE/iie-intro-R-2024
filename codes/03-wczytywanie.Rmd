@@ -1,0 +1,19 @@
+---
+title: "Wczytywanie danych"
+output: html_notebook
+---
+
+Główne funkcjonalności języka R w zakresie wczytywania danych są ograniczone do plików tekstowych.
+
+Funkcje zaczynające się od słowa read umożliwiają wczytanie danych
+
++ read.csv -- wartości są rozdzielone przecinkami 
++ read.csv2 -- wartości są rozdzielone średnikami
++ read.table -- ogólna funkcja
+
+
+```{r}
+dane <- read.csv("https://raw.githubusercontent.com/DepartmentOfStatisticsPUE/intro-R-2024/main/data-raw/policja-droga-info-dzienne.csv")
+dane
+```
+

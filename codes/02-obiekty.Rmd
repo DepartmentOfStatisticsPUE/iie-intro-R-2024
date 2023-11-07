@@ -16,6 +16,7 @@ Tworzymy ciąg liczb całkowitych od 1 do 10
 -1:-10
 c(1,2,3,4,5,6,7,8,9,10) ## tworzenie wektora z funkcją c
 ```
+
 Tworzę wektor składający się z wartości 1, 5, 1000
 
 ```{r}
@@ -80,5 +81,117 @@ x1 > 0
 
 ## Macierze
 
+Deklarujemy macierz w R
+
+```{r}
+A <- matrix(data = c(1, 3, 6, 7), 
+            nrow = 2, 
+            ncol = 2,
+            byrow = TRUE)
+A[1, 1]
+A[2, 1]
+A[, 1]               ## wynik to wektor
+A[, 1, drop = FALSE] ## wynik to macierz
+A[, 1:2]
+A[1, ]               ## wektor
+A[1, , drop = FALSE] ## macierz
+A
+```
+
+Tworzymy macierz na podstawie wektorów
+
+```{r}
+v1 <- c(1, 3)
+v2 <- c(6, 7)
+
+A2 <- cbind(v1, v2)
+A3 <- rbind(v1, v2)
+
+A2
+A3
+
+```
+
+Tworzymy macierz diagonalną
+
+```{r}
+D1 <- diag(x = 1:5)
+D1
+```
+
+```{r}
+D2 <- diag(x = rep(1, 4))
+D2
+```
+
+```{r}
+matrix(data=1:3, ncol = 2)
+```
+
+## Ramki danych
+
+```{r}
+df1 <- data.frame(v1, v2)
+df1[1,1]
+df1[, 1]               ## wektor (1 kolumna)
+df1[, 1, drop = FALSE] ## data.frame (1 kolumna)
+```
+
+```{r}
+df2 <- data.frame(z1 = c("ala", "ma", "kota"),
+                  z2 = c(10, 15, 20))
+
+df2[, 1, drop = FALSE]
+df2[, "z1", drop = FALSE]
+df2$z1 ## zawsze będzie wektor
+```
+
+Konwertuję macierz D2 na typ data.frame
+
+```{r}
+df3 <- data.frame(D2)
+df3
+```
+
+Wstawiamy nową kolumnę do ramki danych df2
+
+```{r}
+df2$z3 <- df2$z2 + 100
+df2
+```
+
 ## Listy
 
+Tworzymy pustą listę. Jakie są zalety listy:
+
+-   może zawierać obiekty różnego typu (mogą tam być wektory, macierze,
+    ramki danych czy inne listy),
+-   listę możemy rozszerzać (dodawać elementy) bez ograniczeń.
+
+```{r}
+l1 <- list()
+
+l1[[1]] <- "to jest pierwszy element"
+
+l1[["a"]] <- "to jest kolejny element"
+
+l1[[1]] ## dostaję się do 1 elementu
+
+l1[["a"]]
+l1$a
+```
+
+Dodajemy do listy dwie listy zawierające wektory
+
+```{r}
+l1$lista1 <- list(1:10)
+l1[["lista2"]] <- list(10:1)
+l1
+str(l1, 1) ## str - structure
+str(l1, 2)
+```
+
+```{r}
+l1[["lista1"]]
+l1[["lista1"]][[1]]
+```
