@@ -25,7 +25,7 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
       + ramki danych ([ćwiczenia #4](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-04.html)),
       + listy ([ćwiczenia #5](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-05.html)),
   + Wczytywanie danych:
-      + pliki tekstowe (`read.csv`, `read.csv2`, `read.table`),
+      + pliki tekstowe (`read.csv`, `read.csv2`, `read.table`) ([ćwiczenia #6](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-06.html)),
       + pliki MS Excel (`readxl::read_excel`).
   + Przetwarzanie danych w R:
       + wybieranie wierszy,

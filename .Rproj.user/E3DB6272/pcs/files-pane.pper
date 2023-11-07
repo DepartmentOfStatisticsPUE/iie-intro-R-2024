@@ -1,12 +1,12 @@
 {
     "sortOrder": [
         {
-            "columnIndex": 3,
-            "ascending": false
-        },
-        {
             "columnIndex": 2,
             "ascending": true
+        },
+        {
+            "columnIndex": 3,
+            "ascending": false
         }
     ],
     "path": "~/Documents/Dydaktyka/intro-r/intro-r-2024-1rok/data-raw"

@@ -15,8 +15,57 @@ countdown(minutes = 10, top = 0)
 
 ## Dane
 
-Proszę pobrać plik `pliki-cwiczenia.zip` z folderu `data-raw` (bezpośredni [link]()), rozpakować i przenieść pliki (`plik1.txt`,`plik2.csv`,`plik3.csv`) do swojego projektu i folderu `data-raw`.
+Proszę pobrać plik `pliki-cwiczenia.zip` z folderu `data-raw` (bezpośredni [link](https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/raw/main/data-raw/pliki-cwiczenia.zip)), rozpakować i przenieść pliki (`plik1.txt`,`plik2.csv`,`plik3.csv`) do swojego projektu i folderu `data-raw`.
 
+Z poziomu R można sprawdzić czy folder rzeczywiście zawiera przekopiowane pliki używając funkcji `list.files()` lub `dir()`. 
+
+
+```{r echo = TRUE}
+dir("../data-raw")
+```
+
+**UWAGA**: w powyższym kodzie użyłem `..` dlatego, że plik `.rmd` znajduje się w folderze `codes/` i trzeba pójść *piętro wyżej* w hierarchii plików. Precyzyjniej: W przypadku nazw katalogów pojedyncza kropka (`.`) oznacza bieżący katalog roboczy, a dwie kropki (`..`) oznaczają katalog nadrzędny.
 
 
 ## Zadania na zajęcia
+
++ Zadanie 1: Wykorzystując funkcję `read.csv` proszę wczytać plik o nazwie `plik1.txt` do obiektu o nazwie `df1`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+df1 <- read.csv("../data-raw/plik1.txt")
+```
+`r unhide()`
+
++ Zadanie 2: Wykorzystując funkcję `read.csv` proszę wczytać plik o nazwie `plik2.csv` do obiektu o nazwie `df2`. Uwaga: plik ma niestandardowy sposób rozdzielenia kolumn (`|`) i do rozwiązania tego zadania trzeba zapoznać się z dokumentacją funkcji `read.csv`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+df2 <- read.csv("../data-raw/plik2.csv", sep = "|")
+```
+`r unhide()`
+
++ Zadanie 3: Wykorzystując funkcję `read.csv` proszę wczytać plik o nazwie `plik3.csv` do obiektu o nazwie `df3`. Uwaga: plik nie zawiera nagłówków i do rozwiązania tego zadania trzeba zapoznać się z dokumentacją funkcji `read.csv`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+df3 <- read.csv("../data-raw/plik3.csv", header = FALSE)
+```
+`r unhide()`
+
++ Zadanie 4: Proszę wczytać plik `plik1.txt` używając funkcji `read.table` do obiektu `df4`. Uwaga: wykorzystanie funkcji `read.table` do wczytania pliku wymaga określenia argumentów dotyczących symbolu rozdzielającego kolumny czy informacji o tym czy występują nazwy kolumn. Aby wykonać to zadanie należy zapoznać się z pomocą do funkcji `read.table`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+df4 <- read.csv("../data-raw/plik1.txt", header = TRUE, sep = ",")
+```
+`r unhide()`
+
++ Zadanie 5: proszę zmodyfikować kod w zadaniu 4 tak, aby wczytać tylko 2 pierwsze wiersze.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+df4 <- read.csv("../data-raw/plik1.txt", header = TRUE, sep = ",", nrows = 2)
+```
+`r unhide()`
+
