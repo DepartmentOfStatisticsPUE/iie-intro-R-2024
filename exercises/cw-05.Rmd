@@ -1,0 +1,96 @@
+---
+title: "Ćwiczenia #5"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 10, top = 0)
+```
+
+## Dane
+
+Proszę wkleić poniższy kod do konsoli lub *chunka* i uruchomić. W wyniku powinni Państwo zobaczyć w *environment* obiekt o nazwie `lista`
+
+```{r echo = TRUE}
+lista <- list(a = list(b = data.frame(x=1:5, y = rep(2,5))),
+              c = matrix(0, nrow = 3, ncol = 5),
+              d = list(e = list(f = seq(10, 10, -2)),
+                       h = list(1:10)))
+```
+
+Aby sprawdzić czy obiekt istnieje można użyć funkcji. Powinni Państwo uzyskać wartość `TRUE` jak w przykładzie poniżej.
+
+```{r echo = TRUE}
+exists("lista")
+```
+
+## Zadania na zajęcia
+
++ Zadanie 1 -- proszę sprawdzić strukturę do drugiego poziomi
+
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+str(lista,2)
+```
+`r unhide()`
+
+
++ Zadanie 2 -- proszę sprawdzić nazwy elementów listy na pierwszym poziomie.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+names(lista)
+```
+`r unhide()`
+
++ Zadanie 3 -- proszę wybrać 2 element listy używając jego nazwy. Co jest przetrzymywane jako drugi element tej listy?
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+lista[["c"]]
+```
+`r unhide()`
+
++ Zadanie 4 -- proszę wybrać 3 kolumnę obiektu przetrzymywanego w elemencie `c` pamiętając o zachowaniu jego typu.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+lista[["c"]][, 3, drop = FALSE]
+```
+`r unhide()`
+
++ Zadanie 5 -- proszę dostać się do pierwszego elementu o listy nazwie `h` (hint: warto skorzystać z funkcji `str`). Proszę podać długość wektora przetrzymywanego w tym obiekcie: `r fitb(length(lista$d$h[[1]]))`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+lista[["d"]][["h"]][[1]]
+lista$d$h[[1]]
+length(lista$d$h[[1]])
+```
+`r unhide()`
+
+
++ Zadanie 6 -- proszę dodać nowy element o nazwie `i` do obiektu `h` będący następującym wektorem `c(1,6,8,2)`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+lista$d$h[["i"]] <- c(1,6,8,2)
+```
+`r unhide()`
+
++ Zadanie 8 -- proszę dostać się do elementu o nazwie `f` i podać jego wartość: `r fitb(lista[["d"]][["e"]][["f"]])`.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+lista[["d"]][["e"]][["f"]]
+```
+`r unhide()`
+
+
