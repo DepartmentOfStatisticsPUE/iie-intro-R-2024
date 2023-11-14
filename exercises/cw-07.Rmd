@@ -1,0 +1,33 @@
+---
+title: "Ćwiczenia #6"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 20, top = 0)
+```
+
+## Dane
+
+1. Proszę pobrać plik `gospodarstwa.xlsx` i zapisać w folderze `data-raw/` w swoim projekcie. Plik można pobrać z [github](https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/tree/main/data-raw).
+1. Proszę zainstalować pakiet `readxl` i go załadować funkcją `library`.
+2. Korzystając z funkcji `read_excel` z pakietu `readxl` proszę wczytać plik o nazwie `gospodarstwa.xlsx` do obiektu o nazwie `gosp`.
+
+Proszę wykonać następujące zadania
+
+## Zadania
+
+1. Utwórz zbiór, w którym są gospodarstwa ze wsi.
+2. Utwórz zbiór, w którym są gospodarstwa o dochodach > 2000 zł.
+3. Utwórz zbiór, który zawiera gospodarstwa z województwa wielkopolskiego oraz które zamieszkują wieś i mają dochody powyżej 3000 zł.
+4. Wybierz gospodarstwa domowe z województwa dolnośląskiego i mazowieckiego z miast powyżej 500 tys. mieszkańców.
+5. Wybierz gospodarstwa domowe z wierszy 10-15.
+6. Wybierz gospodarstwa domowe z danymi tylko dla kolumny woj i wydg ale w odniesieniu jedynie dla gospodarstw z województwa wielkopolskiego.
+7. Wybierz wszystkie gospodarstwa, których dochód jest z przedziału 3000--4000 i zostaw tylko tą zmienną w zbiorze.
+
