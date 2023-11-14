@@ -1,0 +1,127 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+dane <- read.csv("https://raw.githubusercontent.com/DepartmentOfStatisticsPUE/intro-R-2024/main/data-raw/policja-droga-info-dzienne.csv")
+dane
+```
+
+```{r}
+dim(dane)
+nrow(dane)
+ncol(dane)
+class(dane)
+```
+```{r}
+str(dane)
+```
+```{r}
+dane$data[1:10]
+dane[, 1:2]
+dane[, c(1, 5, 10)]
+dane[, c("data", "miesiac", "rok")]
+dane[, c("wypadki_drogowe", "zabici_w_wypadkach", "ranni_w_wypadkach")]
+# dane[, c("wypadki", "zabici_w_wypadkach", "ranni_w_wypadkach")] -- error
+```
+
+Wybieramy kolumny z funkcją subset
+
+```{r}
+subset(dane, select = 1) ## zawsze będzie ramka danych
+subset(dane, select = c("dzien_tygodnia", "rok"))
+subset(dane, select = c(1, 5, 10))
+```
+
+Jak wskazać kolumny, których nie chcemy
+
+```{r}
+dane[, -c(2,5)]
+```
+Wybieramy wiersze
+
+```{r}
+dane[c(1, 5, 10), ]
+dane[c(1, 5, 10), c("data", "zabici_w_wypadkach")]
+
+dane[c(25, 80, 1000), 
+     c("wypadki_drogowe", "zabici_w_wypadkach", "ranni_w_wypadkach")]
+
+head(dane)
+tail(dane, n=2)
+```
+
+Warunkowy wybór wierszy
+
+== 
+
+```{r}
+c(4, 6, 10) == 10
+which(c(4, 6, 10) == 10)
+
+dane[dane$zabici_w_wypadkach == 0, ]
+
+which(dane$zabici_w_wypadkach == 0)
+
+dane[which(dane$zabici_w_wypadkach == 0), ]
+
+subset(dane, zabici_w_wypadkach == 0)
+```
+
+```{r}
+c("ala", "ma", "kota") == "Ala"
+c("ala ", "ma", "kota") == "ala"
+```
+
+Wybieramy poniedziałki
+
+```{r}
+subset(dane, dzien_tygodnia == "Pon")
+```
+
+!=
+
+```{r}
+c(4, 6, 10) != 10
+!(c(4, 6, 10) == 10)
+```
+>, < , >=, <=
+
+
+&
+
+Wybieram te wiersze, w ktorych zgineło na polsich drogach 0 osób i były to poniedziałki
+
+```{r}
+subset(dane, zabici_w_wypadkach == 0 & dzien_tygodnia == "Pon")
+
+dane[dane$zabici_w_wypadkach == 0 & dane$dzien_tygodnia == "Pon", ]
+
+subset(dane, ranni_w_wypadkach == 60 & miesiac == 12)
+```
+
+| , %in%
+
+```{r}
+c(4, 6, 10) == 10 | c(4, 6, 10) == 4
+
+c(4, 6, 10) %in% c(4, 10)
+```
+Wybieram te wiersze, w których zmienna zabici_w_wypadach równa się 0 lub 10
+
+```{r}
+dane[dane$zabici_w_wypadkach == 0 | dane$zabici_w_wypadkach == 10, ]
+
+dane[dane$zabici_w_wypadkach %in% c(0, 10), ]
+
+subset(dane, zabici_w_wypadkach == 0 | zabici_w_wypadkach == 10)
+
+subset(dane, zabici_w_wypadkach %in% c(0,10))
+```
+
+
+
+
+
+
