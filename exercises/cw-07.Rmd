@@ -26,7 +26,7 @@ Proszę wykonać następujące zadania
 1. Utwórz zbiór, w którym są gospodarstwa ze wsi.
 2. Utwórz zbiór, w którym są gospodarstwa o dochodach > 2000 zł.
 3. Utwórz zbiór, który zawiera gospodarstwa z województwa wielkopolskiego oraz które zamieszkują wieś i mają dochody powyżej 3000 zł.
-4. Wybierz gospodarstwa domowe z województwa dolnośląskiego i mazowieckiego z miast powyżej 500 tys. mieszkańców.
+4. Wybierz gospodarstwa domowe z województwa dolnośląskiego lub mazowieckiego z miast powyżej 500 tys. mieszkańców.
 5. Wybierz gospodarstwa domowe z wierszy 10-15.
 6. Wybierz gospodarstwa domowe z danymi tylko dla kolumny woj i wydg ale w odniesieniu jedynie dla gospodarstw z województwa wielkopolskiego.
 7. Wybierz wszystkie gospodarstwa, których dochód jest z przedziału 3000--4000 i zostaw tylko tą zmienną w zbiorze.
