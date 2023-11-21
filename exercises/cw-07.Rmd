@@ -19,15 +19,78 @@ countdown(minutes = 20, top = 0)
 1. Proszę zainstalować pakiet `readxl` i go załadować funkcją `library`.
 2. Korzystając z funkcji `read_excel` z pakietu `readxl` proszę wczytać plik o nazwie `gospodarstwa.xlsx` do obiektu o nazwie `gosp`.
 
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+library(readxl)
+gosp <- read_excel("data-raw/gospodarstwa.xlsx")
+```
+`r unhide()`
+
 Proszę wykonać następujące zadania
 
-## Zadania
+## Zadania -- wybór wierszy
 
 1. Utwórz zbiór, w którym są gospodarstwa ze wsi.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad1 <- subset(gosp, klm == 6)
+```
+`r unhide()`
+
 2. Utwórz zbiór, w którym są gospodarstwa o dochodach > 2000 zł.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad2 <- subset(gosp, dochg > 2000)
+```
+`r unhide()`
+
+
 3. Utwórz zbiór, który zawiera gospodarstwa z województwa wielkopolskiego oraz które zamieszkują wieś i mają dochody powyżej 3000 zł.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad3 <- subset(gosp, woj == "30" & dochg > 3000)
+```
+`r unhide()`
+
 4. Wybierz gospodarstwa domowe z województwa dolnośląskiego lub mazowieckiego z miast powyżej 500 tys. mieszkańców.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad4 <- subset(gosp, woj %in% c("02", "14") & klm == 1)
+```
+`r unhide()`
+
+
 5. Wybierz gospodarstwa domowe z wierszy 10-15.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+gosp[10:15, ]
+```
+`r unhide()`
+
 6. Wybierz gospodarstwa domowe z danymi tylko dla kolumny woj i wydg ale w odniesieniu jedynie dla gospodarstw z województwa wielkopolskiego.
+
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad6 <- subset(gosp, woj == "30", select = c("woj", "wydg"))
+zad6 <- gosp[gosp$woj == "30", c("woj", "wydg")]
+```
+`r unhide()`
+
 7. Wybierz wszystkie gospodarstwa, których dochód jest z przedziału 3000--4000 i zostaw tylko tą zmienną w zbiorze.
 
+`r hide("Rozwiązanie")`
+```{r, echo = TRUE, eval = F}
+zad7 <- subset(gosp, dochg >= 3000 & dochg <= 4000, select = c("dochg"))
+```
+`r unhide()`
+
+## Zadania -- tworzenie nowych kolumn
+
+1. Utwórz nową kolumnę o nazwie `wies` przyjmującą wartość `TRUE` jeżeli gospodarstwo zamieszkuje wieś i `FALSE` w przeciwnym wypadku.
+2. Utwórz nową zmienną o nazwie `relacja` jako relacja wydatków do dochodów. 
+3. Utwórz nową zmienną `wydatki_kat` kategoryzującą wydatki do następujących przedziałów: `do 1000`, `powyżej 1000`.

@@ -1070,7 +1070,7 @@ display: none;
 </div>
 
 
-<div class="countdown" id="timer_368d7dbc" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_d3f4bfd8" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1087,25 +1087,100 @@ funkcją <code>library</code>.</li>
 <code>gospodarstwa.xlsx</code> do obiektu o nazwie
 <code>gosp</code>.</li>
 </ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>library(readxl)
+gosp &lt;- read_excel(&quot;data-raw/gospodarstwa.xlsx&quot;)</code></pre>
+</div>
 <p>Proszę wykonać następujące zadania</p>
 </div>
-<div id="zadania" class="section level2">
-<h2>Zadania</h2>
+<div id="zadania----wybór-wierszy" class="section level2">
+<h2>Zadania -- wybór wierszy</h2>
 <ol style="list-style-type: decimal">
 <li>Utwórz zbiór, w którym są gospodarstwa ze wsi.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad1 &lt;- subset(gosp, klm == 6)</code></pre>
+</div>
+<ol start="2" style="list-style-type: decimal">
 <li>Utwórz zbiór, w którym są gospodarstwa o dochodach &gt; 2000
 zł.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad2 &lt;- subset(gosp, dochg &gt; 2000)</code></pre>
+</div>
+<ol start="3" style="list-style-type: decimal">
 <li>Utwórz zbiór, który zawiera gospodarstwa z województwa
 wielkopolskiego oraz które zamieszkują wieś i mają dochody powyżej 3000
 zł.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad3 &lt;- subset(gosp, woj == &quot;30&quot; &amp; dochg &gt; 3000)</code></pre>
+</div>
+<ol start="4" style="list-style-type: decimal">
 <li>Wybierz gospodarstwa domowe z województwa dolnośląskiego lub
 mazowieckiego z miast powyżej 500 tys. mieszkańców.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad4 &lt;- subset(gosp, woj %in% c(&quot;02&quot;, &quot;14&quot;) &amp; klm == 1)</code></pre>
+</div>
+<ol start="5" style="list-style-type: decimal">
 <li>Wybierz gospodarstwa domowe z wierszy 10-15.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>gosp[10:15, ]</code></pre>
+</div>
+<ol start="6" style="list-style-type: decimal">
 <li>Wybierz gospodarstwa domowe z danymi tylko dla kolumny woj i wydg
 ale w odniesieniu jedynie dla gospodarstw z województwa
 wielkopolskiego.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad6 &lt;- subset(gosp, woj == &quot;30&quot;, select = c(&quot;woj&quot;, &quot;wydg&quot;))
+zad6 &lt;- gosp[gosp$woj == &quot;30&quot;, c(&quot;woj&quot;, &quot;wydg&quot;)]</code></pre>
+</div>
+<ol start="7" style="list-style-type: decimal">
 <li>Wybierz wszystkie gospodarstwa, których dochód jest z przedziału
 3000--4000 i zostaw tylko tą zmienną w zbiorze.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Rozwiązanie
+</button>
+<pre class="r"><code>zad7 &lt;- subset(gosp, dochg &gt;= 3000 &amp; dochg &lt;= 4000, select = c(&quot;dochg&quot;))</code></pre>
+</div>
+</div>
+<div id="zadania----tworzenie-nowych-kolumn" class="section level2">
+<h2>Zadania -- tworzenie nowych kolumn</h2>
+<ol style="list-style-type: decimal">
+<li>Utwórz nową kolumnę o nazwie <code>wies</code> przyjmującą wartość
+<code>TRUE</code> jeżeli gospodarstwo zamieszkuje wieś i
+<code>FALSE</code> w przeciwnym wypadku.</li>
+<li>Utwórz nową zmienną o nazwie <code>relacja</code> jako relacja
+wydatków do dochodów.</li>
+<li>Utwórz nową zmienną <code>wydatki_kat</code> kategoryzującą wydatki
+do następujących przedziałów: <code>do 1000</code>,
+<code>powyżej 1000</code>.</li>
 </ol>
 </div>
 
