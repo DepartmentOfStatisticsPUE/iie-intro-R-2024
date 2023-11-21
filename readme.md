@@ -29,8 +29,8 @@ Materiały na kurs "Wprowadzenie do pakietu statystycznego R".
       + pliki MS Excel (`readxl::read_excel`).
   + Przetwarzanie danych w R:
       + wybieranie kolumn i wierszy ([notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/codes/04-ramkidanych.nb.html), [ćwiczenia #7](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-07.html)),
-      + tworzenie nowych kolumn.
-  + Pętle, funkcje
+      + tworzenie nowych kolumn ([notatnik](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/codes/04-ramkidanych.nb.html), [ćwiczenia #7](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-07.html)).
+  + Pętle, funkcje ([notatnik](), [ćwiczenia #7](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/intro-R-2024/blob/main/exercises/cw-08.html)).
   
 
 ## Struktura repozytorium

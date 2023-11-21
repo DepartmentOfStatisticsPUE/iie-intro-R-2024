@@ -1,0 +1,30 @@
+---
+title: "Ćwiczenia #7"
+output: webexercises::webexercises_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(webexercises)
+library(countdown)
+```
+
+```{r}
+countdown(minutes = 20, top = 0)
+```
+
+# Napisz następujące funkcje
+
+1. Napisz funkcję o nazwie `licz_pole`, która liczy pole kwadratu. Funkcja powinna przyjmować jeden argument o nazwie `bok` i zwracać obliczone pole.
+
+2. Napisz funkcję o nazwie `czy_parzysta`, która zwraca czy dana liczba jest parzysta. Funkcja powinna mieć jeden argument o nazwie `liczba`, której domyślna wartość wynosi 10. Funkcja powinna zwracać wartość `TRUE` jeżeli liczba jest parzysta i `FALSE` gdy jest nieparzysta.
+
+3. Napisz funkcję o nazwie `licz_pole_obwod`, która liczy pole i obwód walca. Funkcja powinna przyjmować dwa argumenty `promien` i `wysokosc` i zwracać w wyniku wektor składający się z dwóch elementów: pola i obwodu.
+
+4. Zmodyfikuj funkcję z punktu 3 tak aby zwracała listę z nazwanymi elementami. Użyj nazwy `pole` dla elementu pola i `obwod` dla obwodu.
+
+5. Zmodyfikuj funkcję z punktu 3 tak aby sprawdzała czy podane argumenty są większe od zera. Jeżeli warunki są niespełnione powinna zwrócić błąd. 
+
+6. Napisz funkcję o nazwie `licz_obj_stozka`, która na podstawie argumentów określających wysokość (`wysokosc`) oraz promień (`promien`) wyznacza objetość stożka. 
+
+7. Napisz funkcję o nazwie `tabliczka`, która korzystając z pętli `for` tworzy tabliczkę mnożenia dla zadanego zakresu liczb (argument `liczba`). Przykładowo `tabliczka(liczba = 1:5)` tworzy tabliczkę mnożenia `5 x 5` od `1` do `5`, a `tabliczka(liczba = 5:20)` tworzy tabliczkę o wymiarach `16 x 16` od `5` do `20`.
